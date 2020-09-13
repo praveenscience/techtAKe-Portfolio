@@ -1,4 +1,67 @@
 body {
   font-family: "Open Sans";
+  padding-top: 72px;
+  font-size: 10pt;
+}
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  left: 0;
+}
+section#home {
+  position: relative;
+  height: 100vh;
+  margin-top: -72px;
+  overflow: hidden;
+}
+section#home::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 1;
+  text-shadow: 0 0 5px #000;
+}
+.home-content h1 {
+  text-transform: uppercase;
+  font-weight: 300;
   font-size: 3.5em;
+  margin-bottom: 15px;
+  white-space: nowrap;
+}
+.home-content h2 {
+  font-size: 1.75em;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.home-content h2 span {
+  font-weight: normal;
+}
+.home-content p {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+.home-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  left: 35%;
+  transform: translate(-35%);
 }
